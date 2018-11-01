@@ -13,6 +13,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ProfileComponent } from './components/profile/profile.component';
 
 import {ValidationService} from './services/validation.service';
+import {AuthService} from './services/auth.service';
 import { FlashMessagesModule } from 'angular2-flash-messages/module';
 
 const appRoutes: Routes =  [
@@ -34,13 +35,13 @@ const appRoutes: Routes =  [
     ProfileComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule ,
     FormsModule,
     HttpModule,
     RouterModule.forRoot(appRoutes),
     FlashMessagesModule.forRoot()
   ],
-  providers: [ValidationService],
+  providers: [ValidationService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
