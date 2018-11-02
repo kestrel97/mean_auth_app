@@ -44,4 +44,4 @@ const appRoutes: Routes =  [
   providers: [ValidationService, AuthService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
